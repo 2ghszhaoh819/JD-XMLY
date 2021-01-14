@@ -25,7 +25,7 @@ jobs:
                   npm install
             - name: "运行 【京东宠汪汪喂食】"
               run: |
-                  node onlyOneExecute.js
+                  node jd_joy_feedPets.js
               env:
                   JD_COOKIE: ${{ github.event.client_payload.JD_COOKIE || secrets.JD_COOKIE }}
                   JD_DEBUG: ${{ github.event.client_payload.JD_DEBUG || secrets.JD_DEBUG }}
@@ -45,4 +45,4 @@ jobs:
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
                   JOY_FEED_COUNT: ${{ github.event.client_payload.JOY_FEED_COUNT || secrets.JOY_FEED_COUNT }}
-                  SYNCURL: https://github.com/lxk0301/jd_scripts/raw/master/jd_joy_feedPets.js
+           
