@@ -27,7 +27,7 @@ jobs:
                   npm install
             - name: "运行 【京小超】"
               run: |
-                  node onlyOneExecute.js
+                  node jd_superMarket.js
               env:
                   JD_COOKIE: ${{ github.event.client_payload.JD_COOKIE || secrets.JD_COOKIE }}
                   JD_DEBUG: ${{ github.event.client_payload.JD_DEBUG || secrets.JD_DEBUG }}
@@ -50,4 +50,4 @@ jobs:
                   jdBusinessCircleJump: ${{ github.event.client_payload.BUSINESS_CIRCLE_JUMP || secrets.BUSINESS_CIRCLE_JUMP }}
                   SUPERMARKET_LOTTERY: ${{ github.event.client_payload.SUPERMARKET_LOTTERY || secrets.SUPERMARKET_LOTTERY }}
                   SUPERMARKET_SHARECODES: ${{ github.event.client_payload.SUPERMARKET_SHARECODES || secrets.SUPERMARKET_SHARECODES }}
-                  SYNCURL: https://github.com/lxk0301/jd_scripts/raw/master/jd_superMarket.js
+           
