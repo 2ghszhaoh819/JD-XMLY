@@ -29,7 +29,7 @@ jobs:
             - name: "运行 【互助码获取并提交】"
               timeout-minutes: 350
               run: |
-                  node onlyOneExecute.js
+                  node jd_shareCode_auto.js
               env:
                   #推送专用
                   PUSH_KEY: ${{ github.event.client_payload.PUSH_KEY || secrets.PUSH_KEY }}
@@ -50,4 +50,4 @@ jobs:
                   JD_COOKIE: ${{ github.event.client_payload.JD_COOKIE || secrets.JD_COOKIE }}
                   JD_DEBUG: ${{ github.event.client_payload.JD_DEBUG || secrets.JD_DEBUG }}
                   DO_NOT_FORK: ${{ github.event.client_payload.DO_NOT_FORK || secrets.DO_NOT_FORK }}
-                  SYNCURL: https://raw.githubusercontent.com/sazs34/MyActions/master/backup/jd_shareCode_auto.js
+       
